@@ -76,13 +76,13 @@ export function Games() {
           {games.map(game => (
           <li key={game.id}>
             <div className="content">
+              <div className="content-image" >
+                <img src={game.box_art_url} alt="Caratula"/>
+              </div>
               <div className="content-title">
                 <Typography variant="h5">
                   {game.name}
                 </Typography>
-              </div>
-              <div className="content-image" >
-                <img src={game.box_art_url} alt="Caratula"/>
               </div>
             </div>
           </li>))}

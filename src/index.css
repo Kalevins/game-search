@@ -176,7 +176,16 @@ li .content .content-title h5 {
 
 li .content .content-image img {
   width: 100%;
-  border-radius: 4vw;
+  border-radius: 4vw 0px 4vw 0px;
+  opacity: 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+li .content:hover img {
+  opacity: 0.5;
 }
 
 li:first-child:nth-last-child(1) {
