@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kevinmuz55/Game-Search/static/css/main.dbd71a82.chunk.css",
+    "main.js": "/kevinmuz55/Game-Search/static/js/main.7dadd0b3.chunk.js",
+    "main.js.map": "/kevinmuz55/Game-Search/static/js/main.7dadd0b3.chunk.js.map",
+    "runtime-main.js": "/kevinmuz55/Game-Search/static/js/runtime-main.8b32ccde.js",
+    "runtime-main.js.map": "/kevinmuz55/Game-Search/static/js/runtime-main.8b32ccde.js.map",
+    "static/js/2.108d48ff.chunk.js": "/kevinmuz55/Game-Search/static/js/2.108d48ff.chunk.js",
+    "static/js/2.108d48ff.chunk.js.map": "/kevinmuz55/Game-Search/static/js/2.108d48ff.chunk.js.map",
+    "index.html": "/kevinmuz55/Game-Search/index.html",
+    "static/css/main.dbd71a82.chunk.css.map": "/kevinmuz55/Game-Search/static/css/main.dbd71a82.chunk.css.map",
+    "static/js/2.108d48ff.chunk.js.LICENSE.txt": "/kevinmuz55/Game-Search/static/js/2.108d48ff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b32ccde.js",
+    "static/js/2.108d48ff.chunk.js",
+    "static/css/main.dbd71a82.chunk.css",
+    "static/js/main.7dadd0b3.chunk.js"
+  ]
+}
