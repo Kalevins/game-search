@@ -20,9 +20,6 @@ npm start
 
 * **Kevin Muñoz Rengifo** - *Totalidad* - [kevinmuz55](https://github.com/kevinmuz55)
 
-## Expresiones de Gratitud 🎁
+## Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* Agradecimientos especiales a Teleperformance
