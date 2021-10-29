@@ -1,6 +1,6 @@
 # GAME SEARCH
 
-_Proyecto que consume la API de Twich para la busqueda de videojuegos con Ajax._
+_Proyecto que consume la API de Twich para la búsqueda de videojuegos con Ajax._
 
 ### 🔧 Instalación
 
