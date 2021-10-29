@@ -1,25 +1,29 @@
 # GAME SEARCH
 
-_Proyecto en ReactJS que consume la API de Twich con Ajax._
+_Proyecto que consume la API de Twich para la busqueda de videojuegos con Ajax._
 
-### Instalación 🔧
+### 🔧 Instalación
 
 _En el directorio del proyecto, puede ejecutar:_
-
+```
+npm i
+```
 ```
 npm start
 ```
 
-## Construido con 🛠️
+## 🛠️ Construcción
 
 * [React](https://reactjs.org/) - Framework web usado
 * [Material](https://mui.com/) - Libreria css
 * [Sass](https://sass-lang.com/) - Preprocesador css
 
-## Autores ✒️
+## ✒️ Autores
 
 * **Kevin Muñoz Rengifo** - *Totalidad* - [kevinmuz55](https://github.com/kevinmuz55)
 
-## Gratitud 🎁
+También puedes ver la lista de todos los [contribuyentes](https://github.com/kevinmuz55/Biblio-Search/contributors) quíenes han participado en este proyecto. 
+
+## 🎁 Expresiones de Gratitud
 
 * Agradecimientos especiales a Teleperformance
