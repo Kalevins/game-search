@@ -22,8 +22,6 @@ npm start
 
 * **Kevin Muñoz Rengifo** - *Totalidad* - [kevinmuz55](https://github.com/kevinmuz55)
 
-También puedes ver la lista de todos los [contribuyentes](https://github.com/kevinmuz55/Biblio-Search/contributors) quíenes han participado en este proyecto. 
-
 ## 🎁 Expresiones de Gratitud
 
 * Agradecimientos especiales a Teleperformance
