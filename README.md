@@ -10,7 +10,15 @@ _En el directorio del proyecto ejecutar:_
 npm i
 ```
 ```
-npm start
+npm run start
+```
+
+## 📦 Despliegue
+
+_Para desplegar el proyecto en Github pages cambiar en el package.json el campo homepage por el nombre del repositorio de github y ejecutar_
+
+```
+npm run deploy
 ```
 
 ## 🛠️ Construcción
