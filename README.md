@@ -25,8 +25,6 @@ npm run deploy
 
 * [React](https://reactjs.org/) - Librearia de JavaScript
 * [Material](https://mui.com/) - Libreria css
-* [HTML](https://developer.mozilla.org/es/docs/Web/HTML) - Lenguaje de marcado
-* [CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Hojas de estilo
 * [Sass](https://sass-lang.com/) - Preprocesador CSS
 * [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación
 
