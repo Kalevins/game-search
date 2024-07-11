@@ -127,7 +127,7 @@ li {
       justify-content: center;
       margin-bottom: 1vw;
       overflow: hidden;
-      
+
       h5 {
         color: white;
         font-size: 2vw;
@@ -165,7 +165,7 @@ li:first-child:nth-last-child(1) {
     h5 {
       font-size: 4vw;
     }
-  
+
     div {
       padding-left: 10vw;
       padding-right: 10vw;
@@ -188,7 +188,7 @@ li:first-child:nth-last-child(3n+0) ~ li {
     h5 {
       font-size: 2vw;
     }
-  
+
     div {
       padding-left: 4vw;
       padding-right: 4vw;
@@ -209,7 +209,7 @@ li:first-child:nth-last-child(4) ~ li {
     h5 {
       font-size: 3vw;
     }
-  
+
     div {
       padding-left: 3vw;
       padding-right: 3vw;
@@ -230,7 +230,7 @@ li:first-child:nth-last-child(4) ~ li {
     align-self: flex-end;
   }
   a, i{
-    text-decoration: none; 
+    text-decoration: none;
     color: #fe612c;
   }
 }

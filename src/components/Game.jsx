@@ -11,34 +11,29 @@ export function Games() {
     const url = "https://api.twitch.tv/helix/games/top";
 
     API(url).then(json => {
-      //console.log(json);
       let dataArray = json.data;
       dataArray.map(game => {
         let imageUrl = game.box_art_url.replace("{width}", "285").replace("{height}", "380");
         game.box_art_url = imageUrl;
         return game;
       });
-      //console.log(dataArray);
       setGames(dataArray);
     });
   }, []);
 
   const handleSearch = useCallback(async () => {
     const search = searchRef.current.value;
-    //console.log(search)
     if(!search) return;
 
     const url = "https://api.twitch.tv/helix/search/categories?query="+search;
 
     API(url).then(json => {
-      //console.log(json);
       let dataArray = json.data;
       dataArray.map(game => {
         let imageUrl = game.box_art_url.replace("-52x72", "-285x380");
         game.box_art_url = imageUrl;
         return game;
       });
-      //console.log(dataArray);
       setGames(dataArray);
     });
   }, [])
@@ -46,7 +41,7 @@ export function Games() {
   const theme = createTheme({
     typography: {
       fontFamily: [
-        'Ubuntu', 
+        'Ubuntu',
         'sans-serif'
       ].join(','),
     },
@@ -62,12 +57,12 @@ export function Games() {
           <div className="flux">
             SEARCH
           </div>
-          <TextField 
-            id="standard-basic" 
-            type="search" 
+          <TextField
+            id="standard-basic"
+            type="search"
             color="warning"
-            inputRef={searchRef} 
-            onKeyUp={handleSearch} 
+            inputRef={searchRef}
+            onKeyUp={handleSearch}
           />
         </div>
       </div>
