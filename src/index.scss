@@ -6,59 +6,69 @@ $flux: #082180;
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, black, $neon,black, $flux, black);
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(#800E0B), color-stop(black), color-stop(#082180), to(black));
+  background: linear-gradient(90deg, black, #380705, black, #061035, black);
   background-size: 400% 100%;
   animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
 //###### BUSQUEDA ######
 .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 40px;
+  box-sizing: border-box;
+  transition: all .5s ease;
+
+  &#search-active {
+    max-height: 400px;
+  }
 
   input {
+    border: 2px solid #2356FF;
     color: white;
     width: 80vw;
-    font-size: 3vw;
+    font-size: 20px;
   }
 
   //###### LOGO ######
   .neon {
     font-family: "Righteous", cursive;
     color: #FB4264;
-    font-size: 9vw;
-    line-height: 9vw;
-    text-shadow: 0 0 3vw #F40A35;
+    font-size: 96px;
+    line-height: 96px;
+    text-shadow: 0 0 20px #F40A35;
   }
 
   .flux {
     font-family: "Righteous", cursive;
     color: #426DFB;
-    font-size: 9vw;
-    line-height: 9vw;
-    text-shadow: 0 0 3vw #2356FF;
-    margin-bottom: 5vw;
+    font-size: 96px;
+    line-height: 96px;
+    text-shadow: 0 0 20px #2356FF;
+    margin-bottom: 40px;
   }
 }
 
 //###### ANIMACION LOGO ######
 .neon {
   animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
 }
 
 @keyframes neon {
@@ -75,9 +85,6 @@ body {
 
 .flux {
   animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
 }
 
 @keyframes flux {
@@ -94,38 +101,42 @@ body {
 
 //###### GAMES ######
 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 li {
-  margin-left: 5vw;
-  margin-bottom: 5vw;
   display: inline-block;
-  width: 18.75%;
+  width: 400px;
   list-style: none;
-  border-radius: 4vw;
+  border-radius: 40px;
   background-image: linear-gradient(135deg, rgba($neon,.8), rgba(0,0,0,0), rgba(255,255,255,0), rgba(0,0,0,0), rgba($flux,.8));
   background-repeat: no-repeat;
 
   .content {
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     text-align: center;
     width: 100%;
+    box-sizing: border-box;
 
     div {
-      padding-left: 1vw;
-      padding-right: 1vw;
+      width: 100%;
     }
 
     .content-title{
       height: 5.5vw;
       display:flex;
       justify-content: center;
-      margin-bottom: 1vw;
       overflow: hidden;
 
       h5 {
@@ -136,7 +147,7 @@ li {
 
     .content-image img {
       width: 100%;
-      border-radius: 4vw 0px 4vw 0px;
+      border-radius: 40px 0px 40px 0px;
       opacity: 1;
       transition: .2s ease;
       backface-visibility: hidden;
@@ -145,92 +156,5 @@ li {
 
   .content:hover img {
     opacity: 0.5;
-  }
-}
-
-//###### CASOS ######
-// 1 Juego
-li:first-child:nth-last-child(1) {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  width: 80%;
-  .content {
-    padding-top: 10vw;
-    padding-bottom: 10vw;
-
-    .content-title{
-      height: 8vw;
-    }
-
-    h5 {
-      font-size: 4vw;
-    }
-
-    div {
-      padding-left: 10vw;
-      padding-right: 10vw;
-    }
-  }
-}
-
-// Multiplos de 3 Juegos
-li:first-child:nth-last-child(3n+0),
-li:first-child:nth-last-child(3n+0) ~ li {
-  width: 26.666%;
-  .content {
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-
-    .content-title{
-      height: 6vw;
-    }
-
-    h5 {
-      font-size: 2vw;
-    }
-
-    div {
-      padding-left: 4vw;
-      padding-right: 4vw;
-    }
-  }
-}
-
-// 2 y 4 Juegos
-li:first-child:nth-last-child(2),
-li:first-child:nth-last-child(2) ~ li,
-li:first-child:nth-last-child(4),
-li:first-child:nth-last-child(4) ~ li {
-  width: 42.5%;
-  .content {
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-
-    h5 {
-      font-size: 3vw;
-    }
-
-    div {
-      padding-left: 3vw;
-      padding-right: 3vw;
-    }
-  }
-}
-
-//###### CREACION ######
-.created {
-  color: #757575;
-  font-size: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 4vw;
-  svg {
-    width: 2vw;
-    align-self: flex-end;
-  }
-  a, i{
-    text-decoration: none;
-    color: #fe612c;
   }
 }

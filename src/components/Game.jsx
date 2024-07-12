@@ -1,11 +1,10 @@
-import React, { useState, useRef, useCallback, useEffect }  from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { TextField, Typography, createTheme, ThemeProvider } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { API } from './API';
 
 export function Games() {
   const [games, setGames] = useState([]);
-  const searchRef = useRef();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const url = "https://api.twitch.tv/helix/games/top";
@@ -22,7 +21,6 @@ export function Games() {
   }, []);
 
   const handleSearch = useCallback(async () => {
-    const search = searchRef.current.value;
     if(!search) return;
 
     const url = "https://api.twitch.tv/helix/search/categories?query="+search;
@@ -36,7 +34,7 @@ export function Games() {
       });
       setGames(dataArray);
     });
-  }, [])
+  }, [search])
 
   const theme = createTheme({
     typography: {
@@ -49,7 +47,10 @@ export function Games() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="search">
+      <div
+        className="search"
+        id={search ? "search-active" : ""}
+      >
         <div className="search-container">
           <div className="neon">
             GAMES
@@ -61,28 +62,29 @@ export function Games() {
             id="standard-basic"
             type="search"
             color="warning"
-            inputRef={searchRef}
+            value={search}
             onKeyUp={handleSearch}
+            onChange={e => setSearch(e.target.value)}
           />
         </div>
       </div>
       <div className="games">
         <ul className="games-container">
           {games.map(game => (
-          <li key={game.id}>
-            <div className="content">
-              <div className="content-image" >
-                <img src={game.box_art_url} alt="Caratula"/>
+            <li key={game.id}>
+              <div className="content">
+                <div className="content-image" >
+                  <img src={game.box_art_url} alt="Caratula"/>
+                </div>
+                <div className="content-title">
+                  <Typography variant="h5">
+                    {game.name}
+                  </Typography>
+                </div>
               </div>
-              <div className="content-title">
-                <Typography variant="h5">
-                  {game.name}
-                </Typography>
-              </div>
-            </div>
-          </li>))}
+            </li>
+          ))}
         </ul>
-        <div className="created">Creado con <FavoriteIcon/> por <a href="https://www.linkedin.com/in/kevin-mu%C3%B1oz-rengifo-4178501b0/">Kevin Muñoz Rengifo</a></div>
       </div>
     </ThemeProvider>
   )
